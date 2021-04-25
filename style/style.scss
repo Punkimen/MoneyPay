@@ -1,0 +1,257 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 1.2;
+    color: #333;
+}
+
+input,
+button {
+    font-family: 'Roboto', sans-serif;
+}
+
+.site-container {
+    min-height: 100vh;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 24px;
+    color: #333;
+    transition: all .2s;
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.header {
+    &__logo {}
+}
+
+.form {
+    &__enter {}
+    &__enter-title {}
+    &__input {}
+    &__btn {}
+}
+
+.mb-3 {}
+
+.form-control {}
+
+.btn {}
+
+.btn-success {}
+
+.navbar__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @media(max-width: 991px) {
+        display: block;
+    }
+}
+
+.navbar-info {
+    color: rgba(0, 0, 0, .5);
+    display: flex;
+    @media(max-width: 991px) {
+        display: block;
+    }
+    &__item {
+        @media(max-width: 991px) {
+            margin-bottom: 7px;
+        }
+    }
+    &__label {}
+    &__val {}
+}
+
+.d-flex {}
+
+.mr-2 {}
+
+.mr-1 {}
+
+.section-block {
+    &__title {
+        text-align: center;
+        font-size: 24px;
+    }
+    &__files {
+        max-width: 900px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        @media(max-width: 768px) {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
+
+.input-file {
+    width: 50%;
+    margin-right: .5rem;
+    @media(max-width: 768px) {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: .5rem;
+    }
+}
+
+.section-block__btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media(max-width: 390px) {
+        button {
+            font-size: 12px;
+        }
+    }
+}
+
+.section-block {
+    &__table {}
+}
+
+.table-pay {
+    &__header {
+        font-weight: bold;
+        @media(max-width: 767px) {
+            display: none;
+        }
+    }
+    &__row {
+        @media(max-width: 767px) {
+            background-color: #f8f9fa;
+        }
+    }
+    &__col {}
+    &__body {}
+    &__input {}
+}
+
+.table-pay__col--num {
+    @media(max-width: 767px) {
+        display: none;
+    }
+}
+
+.form__input {
+    @media(max-width: 767px) {
+        &::before {
+            content: attr(data-label);
+            font-size: 12px;
+            margin-bottom: 0.5em;
+            display: block;
+        }
+    }
+}
+
+.table-btn {
+    width: 35px;
+}
+
+.information {
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        @media(max-width: 991px) {
+            display: block;
+        }
+    }
+    &__name {}
+    &__label {
+        margin-right: 10px;
+    }
+    &__value {
+        font-weight: bold;
+    }
+    &__balance {}
+    &__reserv {}
+    &__overdraft {}
+    &__available {}
+}
+
+.information-item {
+    @media(max-width: 991px) {
+        margin-bottom: 10px;
+    }
+}
+
+.bold {
+    font-weight: bold;
+}
+
+#balance {
+    display: none;
+}
+
+.was-validated .form-control:invalid {
+    border-color: #dcd135;
+    background-image: url(../img/warning.svg);
+}
+
+.section-title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.table-history {
+    font-size: 14px;
+    th {
+        text-align: center;
+        vertical-align: middle !important;
+    }
+    td {
+        vertical-align: middle;
+    }
+    tfoot {
+        color: #000;
+        font-weight: bold;
+        td {
+            padding-top: 2px;
+            padding-bottom: 2px;
+        }
+    }
+}
+
+.filther {
+    &__label {
+        font-weight: bold;
+        font-size: 14px;
+    }
+    input {
+        display: block;
+        width: 100%;
+    }
+}
+
+.custom-control-label {
+    vertical-align: middle;
+}
+
+.custom-control-label::before {
+    top: 1px;
+}
+
+.custom-control-label::after {
+    top: 1px;
+}
+
+.custom-checkbox {
+    @media(max-width: 390px) {
+        font-size: 11px;
+    }
+}
+
+.filther__label {
+    @media(max-width: 767px) {
+        text-align: left !important;
+    }
+}
