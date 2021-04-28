@@ -50,7 +50,7 @@
                 </div>
             </div>
         </nav>
-        <section class="section py-3">
+        <section class="section py-3 main-content">
             <div class="container-xl">
                 <div class="alert alert-danger" role="alert">
                     Для усиления безопасности аккаунта рекомендуется <a href="#" class="link">включить</a> двухфакторную аутентификацию
@@ -79,9 +79,9 @@
                                     <div class="table-pay__col col-md-auto"></div>
                                 </div>
                             </div>
-                            <div class="table-pay__body ">
+                            <div class="table-pay__body">
                                 <div class="table-pay__row row align-items-center py-3">
-                                    <div class="table-pay__col table-pay__col--num col-md-auto">1</div>
+                                    <div class="table-pay__col table-pay__col--num col-md-auto table-pay__count">1</div>
                                     <div class="table-pay__col col-md-3">
                                         <div class="form__input mb-3 mb-md-0" data-label="Номер карты">
                                             <input type="name" class="table-pay__input form-control" name="cardNum" required>
@@ -98,18 +98,18 @@
                                         </div>
                                     </div>
                                     <div class="table-pay__col col-md-auto">
-                                        <button type="button" class="btn btn-info table-btn">+</button>
-                                        <button type="button" class="btn btn-outline-info table-btn">-</button>
+                                        <button id="btn-add" type="button" class="btn btn-info table-btn">+</button>
+                                        <button id="btn-remove" type="button" class="btn btn-outline-info table-btn">-</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="form-pay__info row justify-content-center align-items-center ">
                             <div class="form-pay__value col-md-auto mb-3 mb-md-0 text-center">
-                                Всего: <span class="bold">1</span> платежей на <span class="bold">0.00</span> грн
+                                Всего: <span class="bold total-count">1</span> платежей на <span class="bold">0.00</span> грн
                             </div>
                             <div class="form-pay__btn col-md-auto text-center">
-                                <button id="submitPay" class="btn btn-info" type="submit">Отправить платежи</button>
+                                <button id="submitPay" class="btn btn-info" type="button">Отправить платежи</button>
                             </div>
                         </div>
                     </form>
@@ -178,7 +178,7 @@
                 </div>
                 <div class="modal-footer">
                     <form action="">
-                        <button type="button" class="btn" data-dismiss="modal">Ок</button>
+                        <button id="form-pay-submit" type="button" class="btn" data-dismiss="modal">Ок</button>
                         <button type="button" class="btn" data-dismiss="modal">Отмена</button>
                     </form>
                 </div>
