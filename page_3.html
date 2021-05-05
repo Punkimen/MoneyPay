@@ -94,7 +94,7 @@
                             </div>
                         </div>
                         <div class="col-md-2">
-                            <div class="custom-control custom-checkbox">
+                            <div class="custom-control custom-checkbox ">
                                 <input type="checkbox" class="custom-control-input" id="customCheck1">
                                 <label class="custom-control-label" for="customCheck1">Частично</label>
                                 <button type="button" class="btn p-0">
@@ -102,7 +102,7 @@
                             </button>
                             </div>
                         </div>
-                    </div> 
+                    </div>
                     <div class="row mb-2 align-items-center">
                         <div class="col-md-6">
                             <div class="filther__label text-right">Статус:</div>
@@ -110,66 +110,66 @@
                         <div class="col-md-6">
                             <div class="form-row">
                                 <div class="col-3">
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="customCheck2">
+                                    <div class="custom-control custom-checkbox filter-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck2" data-filter="all">
                                         <label class="custom-control-label" for="customCheck2">Все</label>
                                     </div>
                                 </div>
                                 <div class="col-3">
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="customCheck3">
+                                    <div class="custom-control custom-checkbox filter-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck3" data-filter="new">
                                         <label class="custom-control-label" for="customCheck3">Новый</label>
                                     </div>
                                 </div>
                                 <div class="col-3">
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="customCheck4">
+                                    <div class="custom-control custom-checkbox filter-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck4" data-filter="holding">
                                         <label class="custom-control-label" for="customCheck4">Проведение</label>
                                     </div>
                                 </div>
                             </div>
                             <div class="form-row">
                                 <div class="col-3">
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="customCheck5">
+                                    <div class="custom-control custom-checkbox filter-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck5" data-filter="success">
                                         <label class="custom-control-label" for="customCheck5">Успех</label>
                                     </div>
                                 </div>
                                 <div class="col-3">
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="customCheck6">
+                                    <div class="custom-control custom-checkbox filter-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck6" data-filter="cancel">
                                         <label class="custom-control-label" for="customCheck6">Отмена</label>
                                     </div>
                                 </div>
                                 <div class="col-3">
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="customCheck7">
+                                    <div class="custom-control custom-checkbox filter-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck7" data-filter="fixed">
                                         <label class="custom-control-label" for="customCheck7">Исправлена</label>
                                     </div>
                                 </div>
                             </div>
                             <div class="form-row">
                                 <div class="col-3">
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="customCheck8">
+                                    <div class="custom-control custom-checkbox filter-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck8" data-filter="error">
                                         <label class="custom-control-label" for="customCheck8">Ошибка</label>
                                     </div>
                                 </div>
                                 <div class="col-3">
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="customCheck9">
+                                    <div class="custom-control custom-checkbox filter-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck9" data-filter="return">
                                         <label class="custom-control-label" for="customCheck9">Возврат</label>
                                     </div>
                                 </div>
                                 <div class="col-3">
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="customCheck10">
+                                    <div class="custom-control custom-checkbox filter-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck10" data-filter="blocked">
                                         <label class="custom-control-label" for="customCheck10">Заблокирована</label>
                                     </div>
                                 </div>
                                 <div class="col-md-12">
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="customCheck11">
+                                    <div class="custom-control custom-checkbox filter-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck11" data-filter="postponed">
                                         <label class="custom-control-label" for="customCheck11">Отложен</label>
                                     </div>
                                 </div>
@@ -178,7 +178,7 @@
 
                     </div>
                     <div class="form-filther__btns d-flex justify-content-center">
-                        <button class="btn btn-info btn-sm mr-2">Поиск</button>
+                        <button id="searchBtn" class="btn btn-info btn-sm mr-2">Поиск</button>
                         <button class="btn btn-info btn-sm">Выгрузить в exel</button>
                     </div>
                 </form>
@@ -233,14 +233,14 @@
                         <td>4405.37</td>
                     </tr>
                 </tfoot>
-                <tbody>
+                <tbody class="table-history__body">
                     <tr>
                         <th scope="row">1</th>
                         <td><button type="button" class="btn p-0">
                             <i class="bi bi-info-circle-fill"></i>
                         </button></td>
                         <td>00000001</td>
-                        <td class="table-date">Otto</td>
+                        <td class="table-date">03.05.2021, 22:22:35</td>
                         <td>Успех</td>
                         <td>Успех</td>
                         <td>000000000001</td>
@@ -255,7 +255,7 @@
                             <i class="bi bi-info-circle-fill"></i>
                         </button></td>
                         <td>00000001</td>
-                        <td class="table-date">Otto</td>
+                        <td class="table-date">03.05.2021, 22:22:35</td>
                         <td>Успех</td>
                         <td>Успех</td>
                         <td>000000000001</td>
@@ -270,7 +270,7 @@
                             <i class="bi bi-info-circle-fill"></i>
                         </button></td>
                         <td>00000001</td>
-                        <td class="table-date">Otto</td>
+                        <td class="table-date">03.05.2021, 22:22:35</td>
                         <td>Успех</td>
                         <td>Успех</td>
                         <td>000000000001</td>
@@ -285,7 +285,7 @@
                             <i class="bi bi-info-circle-fill"></i>
                         </button></td>
                         <td>00000001</td>
-                        <td class="table-date">Otto</td>
+                        <td class="table-date">03.05.2021, 22:22:35</td>
                         <td>Успех</td>
                         <td>Успех</td>
                         <td>000000000001</td>
@@ -300,7 +300,7 @@
                             <i class="bi bi-info-circle-fill"></i>
                         </button></td>
                         <td>00000001</td>
-                        <td class="table-date">Otto</td>
+                        <td class="table-date">03.05.2021, 22:22:35</td>
                         <td>Успех</td>
                         <td>Успех</td>
                         <td>000000000001</td>
@@ -315,7 +315,7 @@
                             <i class="bi bi-info-circle-fill"></i>
                         </button></td>
                         <td>00000001</td>
-                        <td class="table-date">Otto</td>
+                        <td class="table-date">03.05.2021, 22:22:35</td>
                         <td>Успех</td>
                         <td>Успех</td>
                         <td>000000000001</td>
@@ -330,7 +330,7 @@
                             <i class="bi bi-info-circle-fill"></i>
                         </button></td>
                         <td>00000001</td>
-                        <td class="table-date">Otto</td>
+                        <td class="table-date">03.05.2021, 22:22:35</td>
                         <td>Успех</td>
                         <td>Успех</td>
                         <td>000000000001</td>
@@ -345,7 +345,7 @@
                             <i class="bi bi-info-circle-fill"></i>
                         </button></td>
                         <td>00000001</td>
-                        <td class="table-date">Otto</td>
+                        <td class="table-date">03.05.2021, 22:22:35</td>
                         <td>Успех</td>
                         <td>Успех</td>
                         <td>000000000001</td>
