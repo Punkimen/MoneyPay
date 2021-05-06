@@ -298,74 +298,79 @@ if (formEnter) {
             filtherTable() {
                 // пока это не успел решить
                 this.operation = [{
-                    id: '001',
-                    dataSttatus: "success",
-                    status: 'Успех',
-                    number: '0001'
-                }, {
-                    id: '002',
-                    dataSttatus: "new",
-                    status: 'Новый',
-                    number: '0002'
-                }, {
-                    id: '003',
-                    dataSttatus: "holding",
-                    status: 'Проведение',
-                    number: '0003'
-                }, {
-                    id: '004',
-                    dataSttatus: "cancel",
-                    status: 'Отмена',
-                    number: '0004'
-                }, {
-                    id: '005',
-                    dataSttatus: "fixed",
-                    status: 'Исправлена',
-                    number: '0005'
-                }, {
-                    id: '006',
-                    dataSttatus: "error",
-                    status: 'Ошибка',
-                    number: '0006'
-                }, {
-                    id: '007',
-                    dataSttatus: "return",
-                    status: 'Возврат',
-                    number: '0007'
-                }, {
-                    id: '008',
-                    dataSttatus: "return",
-                    status: 'Возврат',
-                    number: '0008'
-                }, {
-                    id: '009',
-                    dataSttatus: "return",
-                    status: 'Возврат',
-                    number: '0009'
-                }, {
-                    id: '010',
-                    dataSttatus: "blocked",
-                    status: 'Заблокирована',
-                    number: '0010'
-                }, {
-                    id: '011',
-                    dataSttatus: "postponed",
-                    status: 'Отложен',
-                    number: '0011'
-                }, ]
-                console.log(this.operation);
+                        id: '001',
+                        dataSttatus: "success",
+                        status: 'Успех',
+                        number: '0001'
+                    }, {
+                        id: '002',
+                        dataSttatus: "new",
+                        status: 'Новый',
+                        number: '0002'
+                    }, {
+                        id: '003',
+                        dataSttatus: "holding",
+                        status: 'Проведение',
+                        number: '0003'
+                    }, {
+                        id: '004',
+                        dataSttatus: "cancel",
+                        status: 'Отмена',
+                        number: '0004'
+                    }, {
+                        id: '005',
+                        dataSttatus: "fixed",
+                        status: 'Исправлена',
+                        number: '0005'
+                    }, {
+                        id: '006',
+                        dataSttatus: "error",
+                        status: 'Ошибка',
+                        number: '0006'
+                    }, {
+                        id: '007',
+                        dataSttatus: "return",
+                        status: 'Возврат',
+                        number: '0007'
+                    }, {
+                        id: '008',
+                        dataSttatus: "return",
+                        status: 'Возврат',
+                        number: '0008'
+                    }, {
+                        id: '009',
+                        dataSttatus: "return",
+                        status: 'Возврат',
+                        number: '0009'
+                    }, {
+                        id: '010',
+                        dataSttatus: "blocked",
+                        status: 'Заблокирована',
+                        number: '0010'
+                    }, {
+                        id: '011',
+                        dataSttatus: "postponed",
+                        status: 'Отложен',
+                        number: '0011'
+                    }, ]
+                    // console.log(this.operation);
                 let checkboxesChecked = []
 
+
+                // получаю массив из выбраных чекбоксов
                 filterCheckboxes.forEach(el => {
                     let nameStatus = el.querySelector('input').dataset.filter
                     if (el.querySelector('input').checked) {
                         checkboxesChecked.push(nameStatus)
                     }
+                    // возвращаю массив
                     return checkboxesChecked;
                 })
 
+                // а здесь фильтрую только элементы таблицы, сравнивая с выбраными чекбоксами, правда не понятно как потом вернуть массив в нормальное состояние
+
                 this.operation = this.operation.filter(el => checkboxesChecked.includes(el.dataSttatus));
-                console.log(this.operation);
+
                 this.renderTable()
             }
         }
