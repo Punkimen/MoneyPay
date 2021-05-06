@@ -213,69 +213,69 @@ if (formEnter) {
     const searchBtn = document.querySelector('#searchBtn')
 
     let operations = {
-        operation: [{
-            id: '001',
-            dataSttatus: "success",
-            status: 'Успех',
-            number: '0001'
-        }, {
-            id: '002',
-            dataSttatus: "new",
-            status: 'Новый',
-            number: '0002'
-        }, {
-            id: '003',
-            dataSttatus: "holding",
-            status: 'Проведение',
-            number: '0003'
-        }, {
-            id: '004',
-            dataSttatus: "cancel",
-            status: 'Отмена',
-            number: '0004'
-        }, {
-            id: '005',
-            dataSttatus: "fixed",
-            status: 'Исправлена',
-            number: '0005'
-        }, {
-            id: '006',
-            dataSttatus: "error",
-            status: 'Ошибка',
-            number: '0006'
-        }, {
-            id: '007',
-            dataSttatus: "return",
-            status: 'Возврат',
-            number: '0007'
-        }, {
-            id: '008',
-            dataSttatus: "return",
-            status: 'Возврат',
-            number: '0008'
-        }, {
-            id: '009',
-            dataSttatus: "return",
-            status: 'Возврат',
-            number: '0009'
-        }, {
-            id: '010',
-            dataSttatus: "blocked",
-            status: 'Заблокирована',
-            number: '0010'
-        }, {
-            id: '011',
-            dataSttatus: "postponed",
-            status: 'Отложен',
-            number: '0011'
-        }, ],
-        renderTable() {
-            historyTable.textContent = ''
-                // count = tablePay.tableRows.length
-            this.operation.forEach(({ id, status, number }, i) => {
-                const tableRow = document.createElement('tr')
-                tableRow.className = 'operation__table-row'
-                tableRow.innerHTML = `
+            operation: [{
+                id: '001',
+                dataSttatus: "success",
+                status: 'Успех',
+                number: '0001'
+            }, {
+                id: '002',
+                dataSttatus: "new",
+                status: 'Новый',
+                number: '0002'
+            }, {
+                id: '003',
+                dataSttatus: "holding",
+                status: 'Проведение',
+                number: '0003'
+            }, {
+                id: '004',
+                dataSttatus: "cancel",
+                status: 'Отмена',
+                number: '0004'
+            }, {
+                id: '005',
+                dataSttatus: "fixed",
+                status: 'Исправлена',
+                number: '0005'
+            }, {
+                id: '006',
+                dataSttatus: "error",
+                status: 'Ошибка',
+                number: '0006'
+            }, {
+                id: '007',
+                dataSttatus: "return",
+                status: 'Возврат',
+                number: '0007'
+            }, {
+                id: '008',
+                dataSttatus: "return",
+                status: 'Возврат',
+                number: '0008'
+            }, {
+                id: '009',
+                dataSttatus: "return",
+                status: 'Возврат',
+                number: '0009'
+            }, {
+                id: '010',
+                dataSttatus: "blocked",
+                status: 'Заблокирована',
+                number: '0010'
+            }, {
+                id: '011',
+                dataSttatus: "postponed",
+                status: 'Отложен',
+                number: '0011'
+            }, ],
+            renderTable() {
+                historyTable.textContent = ''
+                    // count = tablePay.tableRows.length
+                this.operation.forEach(({ id, status, number }, i) => {
+                    const tableRow = document.createElement('tr')
+                    tableRow.className = 'operation__table-row'
+                    tableRow.innerHTML = `
                       <tr>
                         <th scope="row">${i+1}</th>
                         <td><button type="button" class="btn p-0">
@@ -292,31 +292,95 @@ if (formEnter) {
                         <td>4405.37</td>
                     </tr>
                     `
-                historyTable.append(tableRow)
-            })
-        },
-        filtherTable() {
-            filterCheckboxes.forEach(el => {
-                if (el.querySelector('input').checked) {
-                    let nameStatus = el.querySelector('input').dataset.filter
-                    this.operation.filter(function(item) {
-                            // тут возвращает нужные элементы, но не создает новый массив из них
-                            if (item.dataSttatus == nameStatus) {
-                                console.log(item);
-                                // operations.operation = [];
-                                // operations.operation.push(item)
-                                // console.log();
-                            }
-                        })
-                        //почему то возвращает пустой массив, если выбрать несколько checbox
-                        // this.operation = this.operation.filter(item => item.dataSttatus == nameStatus)
-                        // console.log(this.operation);
-                    this.renderTable()
-                }
-            })
-        }
-    }
+                    historyTable.append(tableRow)
+                })
+            },
+            filtherTable() {
+                // пока это не успел решить
+                this.operation = [{
+                    id: '001',
+                    dataSttatus: "success",
+                    status: 'Успех',
+                    number: '0001'
+                }, {
+                    id: '002',
+                    dataSttatus: "new",
+                    status: 'Новый',
+                    number: '0002'
+                }, {
+                    id: '003',
+                    dataSttatus: "holding",
+                    status: 'Проведение',
+                    number: '0003'
+                }, {
+                    id: '004',
+                    dataSttatus: "cancel",
+                    status: 'Отмена',
+                    number: '0004'
+                }, {
+                    id: '005',
+                    dataSttatus: "fixed",
+                    status: 'Исправлена',
+                    number: '0005'
+                }, {
+                    id: '006',
+                    dataSttatus: "error",
+                    status: 'Ошибка',
+                    number: '0006'
+                }, {
+                    id: '007',
+                    dataSttatus: "return",
+                    status: 'Возврат',
+                    number: '0007'
+                }, {
+                    id: '008',
+                    dataSttatus: "return",
+                    status: 'Возврат',
+                    number: '0008'
+                }, {
+                    id: '009',
+                    dataSttatus: "return",
+                    status: 'Возврат',
+                    number: '0009'
+                }, {
+                    id: '010',
+                    dataSttatus: "blocked",
+                    status: 'Заблокирована',
+                    number: '0010'
+                }, {
+                    id: '011',
+                    dataSttatus: "postponed",
+                    status: 'Отложен',
+                    number: '0011'
+                }, ]
+                console.log(this.operation);
+                let checkboxesChecked = []
 
+                filterCheckboxes.forEach(el => {
+                    let nameStatus = el.querySelector('input').dataset.filter
+                    if (el.querySelector('input').checked) {
+                        checkboxesChecked.push(nameStatus)
+                    }
+                    return checkboxesChecked;
+                })
+
+                this.operation = this.operation.filter(el => checkboxesChecked.includes(el.dataSttatus));
+                console.log(this.operation);
+                this.renderTable()
+            }
+        }
+        /*
+          checkboxesChecked.forEach(el => {
+                        // console.log(el);
+                    })
+                    this.operation.filter(item => {
+                            return checkboxesChecked.filter(el => {
+                                // console.log(el);
+                                console.log(item.dataSttatus);
+                                return item.dataSttatus === el
+                            })
+                        })
+        */
     filterCheckboxes.forEach(el => {
         el.addEventListener('click', function(e) {
             if (e.target.tagName !== 'INPUT') return false
